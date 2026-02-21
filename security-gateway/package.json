@@ -11,8 +11,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "ioredis": "^5.9.3",
+    "nodemon": "^3.1.11",
     "rate-limiter-flexible": "^9.1.1",
     "redis": "^5.11.0"
   }

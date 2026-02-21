@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  redis:
+    image: redis:7
+    container_name: redis-gateway
+    ports:
+      - "6379:6379"
+
+  api:
+    build: .
+    container_name: security-gateway-api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - PORT=3000
